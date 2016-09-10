@@ -1,34 +1,34 @@
 //bio object
 var bio = {
-    "name": "Jeff Shomali",
+    "name": "Jeff Bagheri",
     "role": "Full Stack Web Developer",
     "contacts": {
         "mobile": "415-504-1135",
-        "email": "jeffshomali@gmail.com",
+        "email": "info@jeffshomali.com",
         "twitter": "@jeffshomali",
         "github": "JeffShomali",
         "blog": "www.JeffShomali.com",
         "location": "San Francisco"
     },
-    "biopic": "images/avatar.png",
+    "biopic": "images/avatar.jpg",
     "welcomeMessage": "Welcome to my resume",
-    "skills": ["Web Developer", "Enterprunier", "Blogger", "Designer"]
+    "skills": ["Front-end developer", "Full-stack developer", "UI/UX Designer & Developer", "PHP Developer"]
 };
 
 //work object
 var work = {
     jobs: [{
-        "employer": "Khazar24 Co",
+        "employer": "Full Stack Web Developer",
         "title": "UI/UX Designer",
-        "dates": "2005 - 2007",
-        "location": "IRAN",
-        "description": "Khazar 24 was first online real estate business in the north of IRAN during 2005 to 2007. During those days, Khazar24.com was one of the Real Estate industry's most recognized brands and acquired​ by Amin Ertebatat Co for $250,000 ​ in 2008.",
+        "dates": "2015 - 2016",
+        "location": "San Francisco Bay Area",
+        "description": "Purrivacy.org is a crowd-sourced collaboration platform built with Ruby on Rails. It aims to educate people about online privacy.",
     }, {
-        "employer": "Perspollice LLC",
-        "title": "Founder",
-        "dates": "2010 - 2013",
-        "location": "United States, California",
-        "description": "I established an LLC company called Perspollice LLC and bought an Italian restaurant in San Ramon CA, called Pasta Primavera. Then I got my investment visa and moved to the United States. After 2 years, I sold my share to my family and start my new challenge to learn web developments​.",
+        "employer": "Tutyo",
+        "title": "Back End Software Engineer",
+        "dates": "2015 - 2015",
+        "location": "San Francisco Bay Area",
+        "description": "Start-up designed to help students with their homework. The platform used Bootstrap, React, jQuery, PHP and MySQL​.",
     }, ]
 };
 
@@ -37,7 +37,7 @@ var work = {
 var education = {
     "schools": [{
         "name": "Diablo Valley College",
-        "degree": "Associate Degree in Computer Science",
+        "degree": "Associate in Science Degree, Computer Science",
         "dates": "2014 - 2016",
         "location": "United States, California",
         "majors": ["Computer Science"]
@@ -60,17 +60,38 @@ var education = {
 //project object
 var projects = {
     "projects": [{
-        "title": "ZagrosFX",
-        "dates": "2014 - 2015",
-        "description": "ZagrodFX was a signal provider in FOREX market",
-        "images": ["images/project2.png"]
+        "title": "Portfolio",
+        "dates": "2016",
+        "description": "This is my personal website built with HTML,CSS,Javascript, Bootstrap, PHP and used Twitter API",
+        "images": ["images/p1.png"]
 
     }, {
-        "title": "PESS.biz",
+        "title": "Interactive Resume",
         "dates": "2015 - 2016",
-        "description": "Pars Equality is a startup accelator in Silicon Valley",
-        "images": ["images/project2.png"]
-    }]
+        "description": "The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation in vanilla Javascript. All of the resume's content is filled in dynamically with JavaScript",
+        "images": ["images/p2.png"]
+   },{
+       "title": "Interactive Resume",
+       "dates": "2015 - 2016",
+       "description": "The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation in vanilla Javascript. All of the resume's content is filled in dynamically with JavaScript",
+       "images": ["images/p2.png"]
+ },{
+     "title": "Interactive Resume",
+     "dates": "2015 - 2016",
+     "description": "The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation in vanilla Javascript. All of the resume's content is filled in dynamically with JavaScript",
+     "images": ["images/p2.png"]
+},{
+    "title": "Interactive Resume",
+    "dates": "2015 - 2016",
+    "description": "The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation in vanilla Javascript. All of the resume's content is filled in dynamically with JavaScript",
+    "images": ["images/p2.png"]
+}
+
+
+
+
+
+]
 };
 
 
@@ -122,7 +143,7 @@ work.display = function() {
     var length = work.jobs.length;
     for (var i = 0; i < length; i++) {
         var formattedworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer) + HTMLworkTitle.replace("%data%", work.jobs[i].title);
-        var formattedworkDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+        var formattedworkDates    = HTMLworkDates.replace("%data%", work.jobs[i].dates);
         var formattedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
         var formattedworkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 
@@ -182,7 +203,7 @@ education.display = function() {
         for (var onlineCounter = 0; onlineCounter < length; onlineCounter++) {
             var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCounter].title) + HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCounter].school);
             var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCounter].dates);
-            var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCounter].url);
+            var formattedonlineURL   = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCounter].url);
 
             $('.education-entry:last').append(formattedonlineTitle);
             $('.education-entry:last').append(formattedonlineDates);
